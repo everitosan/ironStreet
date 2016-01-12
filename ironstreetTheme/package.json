@@ -1,0 +1,29 @@
+{
+  "name": "ironstreettheme",
+  "version": "1.0.0",
+  "description": "\"wp theme for iron street printing\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "evesan",
+  "license": "ISC",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-stylus": "^0.22.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-injector": "^0.6.1",
+    "include-all": "^0.1.6"
+  },
+  "devDependencies": {
+    "grunt-browserify": "^4.0.1",
+    "grunt-concat-css": "^0.3.1",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-uglify": "^0.11.0"
+  }
+}

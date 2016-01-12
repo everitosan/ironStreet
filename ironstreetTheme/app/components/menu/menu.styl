@@ -1,0 +1,29 @@
+@import '../../styl/colors.styl'	
+#mainMenu
+	background rgba(0,0,0,.3)
+	height 124px
+	width 100%
+	position fixed
+	top 0 
+	left 0
+	ul
+		text-transform uppercase
+		color white
+		margin 0
+		padding 0
+		display flex
+		flex-direction row
+		justify-content flex-end
+		line-height 120px
+		li
+			margin 0 1em
+			cursor pointer
+			list-style none
+			&.active
+				border-bottom 4px solid $ironRed
+			&.special
+				span 
+					border 1px solid white
+					font-size 0.7em
+					padding .3em
+				

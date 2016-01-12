@@ -1,0 +1,29 @@
+{
+  "name": "ironstreettheme",
+  "description": "wp theme for iron street printing",
+  "main": "index.js",
+  "authors": [
+    "evesan"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "es6"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~1.2.3",
+    "paper-button": "PolymerElements/paper-button#~1.0.11"
+  },
+  "devDependencies": {
+    "pure": "purecss#~0.6.0",
+    "jquery": "~2.2.0"
+  }
+}
