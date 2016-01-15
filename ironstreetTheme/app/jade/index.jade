@@ -1,9 +1,157 @@
+//- mixings ************
+include ../components/header/header.jade
+include ../components/footer/footer.jade
+//- end - mixings ******
 doctype html
 html(lang='en')
   head
     title ironStreetPrinting
     meta( charset="utf-8")
+    meta( name="viewport" content="width=device-width" )
     <!-- injector:css -->
     <!-- endinjector -->
-  body
+  body#home
     include ../components/menu/menu.jade
+    +header(1)
+    section
+
+
+      article.social-media.vCenter
+        .iconContainer
+          img.logo(src="assets/icons/ironStreet_logo.png")
+          img(class="separator" src="assets/separator.png")
+          img(src="assets/icons/icc.png")
+
+
+      article.our-mission
+        h2 Our Mission
+        .pure-g
+          .pure-u-1.pure-u-md-1-5
+          .pure-u-1.pure-u-md-3-5
+            p Millions use Any.do to realize their true potential. Any.do helps you achieve anything by syncing your personal tasks, work projects, and shared lists so you have a clear path moving forward. You have a clear path moving forward.
+          .pure-u-1.pure-u-md-1-5
+
+        .pure-g
+          .pure-u-1.pure-u-md-1-3
+            .our_plus
+              .item
+                img(src="assets/icons/like.png") 
+                h3 Text Example
+                p shared lists so you have a clear path moving forward. Download now to see for yourself.
+          .pure-u-1.pure-u-md-1-3
+            .our_plus
+              .item
+                img(src="assets/icons/hands.png") 
+                h3 Text Example
+                p shared lists so you have a clear path moving forward. Download now to see for yourself.
+          .pure-u-1.pure-u-md-1-3
+            .our_plus
+              .item
+                img(src="assets/icons/people.png") 
+                h3 Text Example
+                p shared lists so you have a clear path moving forward. Download now to see for yourself.
+      article.testimonial.vCenter
+        .item
+          .pure-g
+            .pure-u-1.pure-u-md-1-5
+            .pure-u-1.pure-u-md-3-5
+              .pure-g
+                .pure-u-1.pure-u-md-4-5
+                  .quotation “
+                  .text
+                    | We have found that SenText Solutions has been an easy way for us to reach and broaden our core customer base. It is simple to send business update, specials and promotions.
+                .pure-u-1.pure-u-md-1-5
+                  .logo
+                    figure
+                      img(src="assets/koa_logo.png")
+                      a(href="http://www.konaworld.com") Konaworld.com
+            .pure-u-1.pure-u-md-1-5
+      article.services
+        h2 Our Services
+        .pure-g
+          .pure-u-1.pure-u-md-1-5
+          .pure-u-1.pure-u-md-3-5
+            p.text It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-lof letters.
+          .pure-u-1.pure-u-md-1-5
+
+          .pure-g
+            .pure-u-1.pure-u-md-1-4.item
+              img(src="assets/icons/ink.png")
+              .outboxButton
+                span screen Print
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.
+              p LEARN MORE
+            .pure-u-1.pure-u-md-1-4.item
+              img(src="assets/icons/ink.png")
+              .outboxButton
+                span screen Print
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.
+              p LEARN MORE
+            .pure-u-1.pure-u-md-1-4.item
+              img(src="assets/icons/ink.png")
+              .outboxButton
+                span screen Print
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.
+              p LEARN MORE
+            .pure-u-1.pure-u-md-1-4.item
+              img(src="assets/icons/ink.png")
+              .outboxButton
+                span screen Print
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.
+              p LEARN MORE
+
+      article.how_we_work
+        h2 HOW WE WORK
+        .pure-g
+          .pure-u-1.pure-u-md-1-5
+          .pure-u-1.pure-u-md-3-5
+            p Lorem Ipsum is that it has a more-or-less normal distribution of letters. It is a long established fact that a reader.
+          .pure-u-1.pure-u-md-1-5
+        
+        .slider
+          .slide
+            h2 EASIER THAN YOU THINK
+            .pure-g
+              .pure-u-1.pure-u-md-1-3
+              .pure-u-1.pure-u-md-1-3
+                p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+              .pure-u-1.pure-u-md-1-3
+            div.button
+              span start here to build a quote
+          .number
+            div.active
+            div
+            div
+            div
+            div
+        .pure-g
+          .pure-u-1.pure-u-md-1-5
+          .pure-u-1.pure-u-md-3-5
+            p Lorem Ipsum is simply dummy text of the printing  and typesetting industry. Lorem Ipsum has been th industry's standard dummy tex ever since the 1500s,  when an unknown printer.
+          .pure-u-1.pure-u-md-1-5
+
+      article.say_hello
+        h2 don't forget say hello
+        
+        .pure-g
+          .pure-u-1.pure-u-sm-1-5
+          .pure-u-1.pure-u-sm-3-5
+            p Lorem Ipsum is simply dummy text of the printing  and typesetting industry. Lorem Ipsum has been.
+            form
+              .pure-g
+                .pure-u-1.pure-u-md-1-2
+                  input(type="text" placeholder="COMPANY:")
+                .pure-u-1.pure-u-md-1-2
+                  input(type="text" placeholder="EMAIL:")
+              .pure-g
+                .pure-u-1.pure-u-md-1-2
+                  input(type="text" placeholder="NAME:")
+                .pure-u-1.pure-u-md-1-2
+                  input(type="text" placeholder="PHONE:")
+              .pure-g
+                .pure-u-1
+                  textarea(rows="5" placeholder="MESSAGE: ")
+          .pure-u-1.pure-u-sm-1-5
+
+
+    +footer()

@@ -9,9 +9,21 @@ module.exports = function(grunt) {
       }
     },
     dev: {
-      files: {
+      files: [{
         'tmp/index.html': ['tmp/**/*.css', 'tmp/js/**/*.js']
-      }
+      },
+      {
+        'tmp/services.html': ['tmp/**/*.css', 'tmp/js/**/*.js']
+      },
+      {
+        'tmp/products.html': ['tmp/**/*.css', 'tmp/js/**/*.js']
+      },
+      {
+        'tmp/aboutus.html': ['tmp/**/*.css', 'tmp/js/**/*.js']
+      },
+      {
+        'tmp/buildaquote.html': ['tmp/**/*.css', 'tmp/js/**/*.js']
+      }]
     },
     prod: {
       files: {

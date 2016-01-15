@@ -1,0 +1,18 @@
+//- mixings ************
+include ../components/header/header.jade
+include ../components/footer/footer.jade
+//- end - mixings ******
+doctype html
+html(lang='en')
+  head
+    title ironStreetPrinting
+    meta( charset="utf-8")
+    meta( name="viewport" content="width=device-width" )
+    <!-- injector:css -->
+    <!-- endinjector -->
+  body#home
+    include ../components/menu/menu.jade
+    +header(1)
+    section
+        article
+    +footer()

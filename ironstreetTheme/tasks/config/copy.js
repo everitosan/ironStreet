@@ -14,6 +14,7 @@ module.exports = function (grunt) {
                   'pure/grids-core-min.css',
                   'pure/grids-units-min.css',
                   'pure/grids-responsive-min.css',
+                  'normalize-css/normalize.css',
                   'sweetalert/dist/sweetalert.css'],
             dest: 'tmp/css/vendor'
           },
