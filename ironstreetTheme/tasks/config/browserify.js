@@ -3,14 +3,14 @@ module.exports = function (grunt){
 
     devmain: {
       options: {
-        transform: [["babelify", { "stage": 0 , compact: false}]]
+        //transform: [["babelify", { "stage": 0 , compact: false}]]
       },
 
       files: [{ // main JS
         expand: true,
         cwd: 'app/js/',
         src: '**/*.js',
-        dest:'.tmp/js/' ,
+        dest:'tmp/js/' ,
         ext: '.js'
       }]
     }

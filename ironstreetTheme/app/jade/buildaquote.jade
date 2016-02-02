@@ -1,6 +1,8 @@
 //- mixings ************
 include ../components/header/header.jade
 include ../components/footer/footer.jade
+include ../components/input/input.jade
+include ../components/inputSize/inputSize.jade
 //- end - mixings ******
 doctype html
 html(lang='en')
@@ -12,7 +14,141 @@ html(lang='en')
     <!-- endinjector -->
   body#home
     include ../components/menu/menu.jade
-    +header(1)
-    section
-        article
+    +header(5)
+    section#buildAQuote
+      form
+        article.redDivider
+        article.contactInfo
+          .pure-g
+            .pure-u-1.pure-u-md-6-24
+            .pure-u-1.pure-u-md-12-24
+              h3 Contact Info
+              .pure-g
+                .pure-u-1.pure-u-sm-1-2
+                  +input("First Name *", "text")
+                .pure-u-1.pure-u-sm-1-2
+                  +input("Last Name *", "text")
+              .pure-g
+                .pure-u-1.pure-u-sm-1-2
+                  +input("Email adress *", "email")
+                .pure-u-1.pure-u-sm-1-2
+                  +input("phone number *", "text")
+              .pure-g
+                .pure-u-1.pure-u-sm-1-2
+                  +input("Company *", "text")
+                .pure-u-1.pure-u-sm-1-2
+                  +input("Website *", "text")
+
+
+            .pure-u-1.pure-u-md-6-24
+
+        article.projectName
+          .pure-g
+            .pure-u-1.pure-u-md-6-24
+            .pure-u-1.pure-u-md-12-24
+              h3 PROject name
+              .pure-g
+                .pure-u-1.pure-u-sm-1-2
+                  +input("Project name *", "text")
+                .pure-u-1.pure-u-sm-1-2
+            .pure-u-1.pure-u-md-6-24
+            
+            
+        article.productInfo
+          .pure-g
+            .pure-u-1.pure-u-md-6-24
+            .pure-u-1.pure-u-md-12-24
+              h3 PROject name
+              .pure-g
+                .pure-u-1.pure-u-sm-1-2
+                  +input("Product, color", "text")
+                  .removeProduct.outboxButton
+                    span remove this product
+                .pure-u-1.pure-u-sm-1-2
+                  +inputSize()
+                
+              .pure-g
+                .pure-u-1.pure-u-sm-1-2
+                  +input("Product, color", "text")
+                  .removeProduct.outboxButton
+                    span remove this product
+                .pure-u-1.pure-u-sm-1-2
+                  +inputSize()
+              .button
+                span + Add another product
+                              
+            .pure-u-1.pure-u-md-6-24
+            
+        article.printDetails
+          .pure-g
+            .pure-u-1.pure-u-md-6-24
+            .pure-u-1.pure-u-md-12-24
+              h3 Print details
+              .pure-g
+                .pure-u-24-24.pure-u-lg-10-24
+                  +input("IST print location", "text")
+                .pure-u-12-24.pure-u-lg-4-24
+                  +input("ink colors", "text")
+                .pure-u-12-24.pure-u-lg-10-24
+                  +input("ink", "text")
+              .outboxButton
+                span Remove this print location
+              .button
+                span + Add another print location
+            .pure-u-1.pure-u-md-6-24
+
+        article.extras
+          .pure-g
+            .pure-u-1.pure-u-md-6-24
+            .pure-u-1.pure-u-md-12-24
+              h3 Extra
+              .pure-u-1.pure-u-md-1-4.active
+                span.icon-ink
+                .name screen-printing tags
+              .pure-u-1.pure-u-md-1-4
+                span.icon-tag
+                .name hang tags
+              .pure-u-1.pure-u-md-1-4
+                span.icon-size
+                .name size tag
+              .pure-u-1.pure-u-md-1-4
+                span.icon-tshirt
+                .name size tagfolding and bagging
+            .pure-u-1.pure-u-md-6-24
+            
+            
+        article.DesignFiles
+          .pure-g
+            .pure-u-1.pure-u-md-6-24
+            .pure-u-1.pure-u-md-12-24
+              h3 Add your design files
+              +input("Design", "file")
+              +input(" Design notes", "text")
+              
+            .pure-u-1.pure-u-md-6-24
+            
+            
+        article.ShippingInfo
+          .pure-g
+            .pure-u-1.pure-u-md-6-24
+            .pure-u-1.pure-u-md-12-24
+              h3 Shipping info
+              .pure-g
+                .pure-u-1.pure-u-sm-1-2
+                  +input("ship to *", "text")
+                .pure-u-1.pure-u-sm-1-2
+                  +input("attn", "text")
+              .pure-g
+                .pure-u-1.pure-u-sm-1-2
+                  +input("adress *", "text")
+                .pure-u-1.pure-u-sm-1-2
+                  +input("city *", "text")
+                  
+              .pure-g
+                .pure-u-1.pure-u-sm-1-2
+                  +input("state *", "text")
+                .pure-u-1.pure-u-sm-1-2
+                  +input("zip code *", "text")
+                  
+            .pure-u-1.pure-u-md-6-24
     +footer()

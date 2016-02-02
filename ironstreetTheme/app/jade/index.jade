@@ -20,7 +20,9 @@ html(lang='en')
         .iconContainer
           img.logo(src="assets/icons/ironStreet_logo.png")
           img(class="separator" src="assets/separator.png")
-          img(src="assets/icons/icc.png")
+          span.icon-facebook
+          span.icon-instagram
+          span.icon-twitter
 
 
       article.our-mission
@@ -35,19 +37,19 @@ html(lang='en')
           .pure-u-1.pure-u-md-1-3
             .our_plus
               .item
-                img(src="assets/icons/like.png") 
+                span.icon-like
                 h3 Text Example
                 p shared lists so you have a clear path moving forward. Download now to see for yourself.
           .pure-u-1.pure-u-md-1-3
             .our_plus
               .item
-                img(src="assets/icons/hands.png") 
+                span.icon-handShake
                 h3 Text Example
                 p shared lists so you have a clear path moving forward. Download now to see for yourself.
           .pure-u-1.pure-u-md-1-3
             .our_plus
               .item
-                img(src="assets/icons/people.png") 
+                span.icon-people
                 h3 Text Example
                 p shared lists so you have a clear path moving forward. Download now to see for yourself.
       article.testimonial.vCenter
@@ -76,25 +78,25 @@ html(lang='en')
 
           .pure-g
             .pure-u-1.pure-u-md-1-4.item
-              img(src="assets/icons/ink.png")
+              span.icon-ink
               .outboxButton
                 span screen Print
               p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.
               p LEARN MORE
             .pure-u-1.pure-u-md-1-4.item
-              img(src="assets/icons/ink.png")
+              span.icon-pencil
               .outboxButton
                 span screen Print
               p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.
               p LEARN MORE
             .pure-u-1.pure-u-md-1-4.item
-              img(src="assets/icons/ink.png")
+              span.icon-circle
               .outboxButton
                 span screen Print
               p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.
               p LEARN MORE
             .pure-u-1.pure-u-md-1-4.item
-              img(src="assets/icons/ink.png")
+              span.icon-box
               .outboxButton
                 span screen Print
               p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.
@@ -108,22 +110,36 @@ html(lang='en')
             p Lorem Ipsum is that it has a more-or-less normal distribution of letters. It is a long established fact that a reader.
           .pure-u-1.pure-u-md-1-5
         
-        .slider
-          .slide
-            h2 EASIER THAN YOU THINK
-            .pure-g
-              .pure-u-1.pure-u-md-1-3
-              .pure-u-1.pure-u-md-1-3
-                p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
-              .pure-u-1.pure-u-md-1-3
-            div.button
-              span start here to build a quote
-          .number
-            div.active
-            div
-            div
-            div
-            div
+        .slider.carousel(data-carousel)
+          .carousel-items
+            ul.data-carousel
+              li.slide
+                h2 EASIER THAN YOU THINK
+                .pure-g
+                  .pure-u-1.pure-u-md-1-3
+                  .pure-u-1.pure-u-md-1-3
+                    p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                  .pure-u-1.pure-u-md-1-3
+                div.button
+                  span start here to build a quote
+              li.slide
+                h2 EASIER THAN YOU THINK
+                .pure-g
+                  .pure-u-1.pure-u-md-1-3
+                  .pure-u-1.pure-u-md-1-3
+                    p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.
+                  .pure-u-1.pure-u-md-1-3
+                div.button
+                  span start here to build a quote
+            
+          .carousel-tabs
+            ol.bullets(data-carousel-tabs)
+          //- .number
+          //-   div.active
+          //-   div
+          //-   div
+          //-   div
+          //-   div
         .pure-g
           .pure-u-1.pure-u-md-1-5
           .pure-u-1.pure-u-md-3-5

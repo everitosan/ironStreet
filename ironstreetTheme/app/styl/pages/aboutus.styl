@@ -1,0 +1,88 @@
+#aboutus
+  .mainInfo
+    img
+      margin-bottom: 3em
+    .historyText
+      color $ironSoftLightGray2
+  
+  .ourHistory
+    padding 1em 0
+    .timeLine
+      font-size 0
+      img
+        width 25%
+    .timeLineFooter
+      background $ironRed
+      color white
+      padding-bottom 4em
+      .spaceBar
+        margin-bottom 3em
+        .bar
+          background white
+          height 5px
+          width 40%
+        .years
+          color white
+          div:not(.pure-g)
+            padding-top 1em
+          & .active
+            background url('../assets/other_services_cat_bg.png') no-repeat
+            background-position center -20px
+      .next, .prev
+        cursor pointer
+        display flex
+        flex-direction column
+        justify-content center
+        img
+          margin 0 auto
+          height 61px
+          width 21px
+      .prev
+        img
+          transform rotateZ(180deg)
+  
+  .address
+    h2
+      color $ironRed 
+  .map
+    padding 0
+    padding-bottom 3em
+    .mainMap
+      width 100% 
+    .pure-g
+      margin-top 3em
+    address
+      color $ironRed
+      display inline-block
+      text-align left
+      vertical-align super
+    p
+      color $ironRed
+      text-align left
+      
+  .form
+    background url('../assets/emailUs_bg.jpg') no-repeat
+    background-size cover
+    color white
+    div
+      text-align left
+    form
+      margin 0 auto
+      width 90%
+    .minInput
+      width 95%
+    input, textarea
+      box-sizing border-box
+      border 3px solid white
+      background transparent
+      margin .4em 0 
+      padding .5em 1em
+      width 100%
+    textarea
+      resize none
+      
+@media screen and (max-width: 568px)
+  #aboutus
+    .form
+      .minInput
+        width 100%
