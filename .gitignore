@@ -1,11 +1,9 @@
 ironstreetTheme/bower_components
 ironstreetTheme/node_modules
+ironstreetTheme/tmp
 
 polyapp
-site
 
-ironstreetTheme/tmp
-ironstreetTheme/prod
 
 toolkit-2.1.6
 icoo

@@ -2,6 +2,11 @@ module.exports = function (grunt) {
 
   grunt.config.set('jade', {
       dev: {
+        options: {
+          data: {
+            debug: true
+          }
+        },
         files: [{
           expand: true,
   				cwd: 'app/jade',
