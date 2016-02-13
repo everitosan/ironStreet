@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     'copy:dev',
     'stylus:dev',
     'jade:dev',
-    'injector:dev',
-    'browserify'
+    'browserify',
+    'injector:dev'
   ]);
 };

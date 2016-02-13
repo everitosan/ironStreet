@@ -3,7 +3,7 @@
 	height 124px
 	width 100%
 	position fixed
-	top 0 
+	top 0
 	left 0
 	z-index 10000
 	ul
@@ -25,9 +25,20 @@
 			&.active
 				border-bottom 4px solid $ironRed
 			&.special
-				span 
+				span
 					border 1px solid white
 					font-size 0.7em
 					padding .3em
-					
-				
+
+@media screen and (max-width: 568px)
+	#mainMenu
+		background rgba(0,0,0,.3)
+		height 62px
+		ul
+			display none
+			width 100%
+			background rgba(0,0,0,.7)
+			position fixed
+			height 100%
+			flex-direction column
+			text-align center
