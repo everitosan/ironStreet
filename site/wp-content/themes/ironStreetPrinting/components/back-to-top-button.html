@@ -1,0 +1,29 @@
+<dom-module id="back-to-top-button">
+	<template>
+		<style>
+			:host .button span {
+				background: #EF494B;
+			}
+
+		</style>
+
+
+		<div class="button"><span on-click="scrollTop" >back to top</span></div>
+
+	</template>
+</dom-module>
+
+<script>
+
+(function($) {
+
+	Polymer({
+		is: 'back-to-top-button',
+		scrollTop: function() {
+			$("html, body").animate({ scrollTop: "0" });
+		}
+	});
+
+})(jQuery);
+
+</script>

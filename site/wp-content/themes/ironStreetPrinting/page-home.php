@@ -185,4 +185,6 @@ Build A Quote</span>
     </div>
   </article>
 </section>
+
+<back-to-top-button> </back-to-top-button>
 <?php get_footer(); ?>

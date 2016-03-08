@@ -1,8 +1,5 @@
 
 <footer>
-  <div class="button">
-    <span>back to top</span>
-  </div>
   <div class="vCenter">
     <div class="footer pure-g">
       <div class="pure-u-1 pure-u-md-2-24"></div>

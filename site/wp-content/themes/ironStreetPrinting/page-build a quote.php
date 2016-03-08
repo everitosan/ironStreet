@@ -116,77 +116,12 @@ Start Quote</span></div>
       <div class="pure-g">
         <div class="pure-u-1 pure-u-md-6-24"></div>
         <div class="pure-u-1 pure-u-md-12-24">
-          <h3>PROject name</h3>
-          <div class="pure-g">
-            <div class="pure-u-1 pure-u-sm-1-2">
-              <div class="HCenter">
-                <div class="input">
-                  <label>Product, color</label>
-                  <input type="text" />
-                </div>
-              </div>
-              <div class="removeProduct outboxButton"><span>remove this product</span></div>
-            </div>
-            <div class="pure-u-1 pure-u-sm-1-2">
-              <div class="inputsiZeCointainer">
-                <div class="size">
-                  <input type="text" />
-                  <label>S</label>
-                </div>
-                <div class="size">
-                  <input type="text" />
-                  <label>M</label>
-                </div>
-                <div class="size">
-                  <input type="text" />
-                  <label>L</label>
-                </div>
-                <div class="size">
-                  <input type="text" />
-                  <label>XL</label>
-                </div>
-                <div class="size">
-                  <input type="text" />
-                  <label>XXL</label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="pure-g">
-            <div class="pure-u-1 pure-u-sm-1-2">
-              <div class="HCenter">
-                <div class="input">
-                  <label>Product, color</label>
-                  <input type="text" />
-                </div>
-              </div>
-              <div class="removeProduct outboxButton"><span>remove this product</span></div>
-            </div>
-            <div class="pure-u-1 pure-u-sm-1-2">
-              <div class="inputsiZeCointainer">
-                <div class="size">
-                  <input type="text" />
-                  <label>S</label>
-                </div>
-                <div class="size">
-                  <input type="text" />
-                  <label>M</label>
-                </div>
-                <div class="size">
-                  <input type="text" />
-                  <label>L</label>
-                </div>
-                <div class="size">
-                  <input type="text" />
-                  <label>XL</label>
-                </div>
-                <div class="size">
-                  <input type="text" />
-                  <label>XXL</label>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h3>PROject info</h3>
+
+          <cart-product> </cart-product>
+
+
+
           <div class="button"><span>+ Add another product</span></div>
         </div>
         <div class="pure-u-1 pure-u-md-6-24"></div>

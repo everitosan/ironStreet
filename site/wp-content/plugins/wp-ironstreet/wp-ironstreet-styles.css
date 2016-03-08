@@ -1,0 +1,31 @@
+ul.products{
+  display : flex;
+  flex-wrap: wrap;
+}
+
+ul.products li{
+  flex: 1;
+}
+
+ul.products li .wp_ironstreet_list_product_name {
+  color: #EF494B;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+ul.products li .wp_ironstreet_list_product_image {
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+}
+
+ul.products li .wp_ironstreet_list_product_buttons {
+  text-align: center;
+}
+
+ul.products li .wp_ironstreet_list_product_buttons .del {
+  background: #C20000;
+  border-color: #AA0022 #990002 #990023;
+  text-shadow: none;
+  box-shadow: 0 1px 0 #990000;
+}
