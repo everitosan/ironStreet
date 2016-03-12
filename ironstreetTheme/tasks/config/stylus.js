@@ -9,6 +9,16 @@ module.exports = function(grunt){
         dest: 'tmp/css',
         ext: '.css'
       }]
+    },
+    wordpress: {
+      files: [
+      {//main style files
+        expand: true,
+        cwd: 'app/styl',
+        src: ['style.styl'],
+        dest: '../site/wp-content/themes/ironStreetPrinting/css',
+        ext: '.css'
+      }]
     }
   });
 

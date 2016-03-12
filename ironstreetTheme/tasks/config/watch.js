@@ -1,16 +1,20 @@
 module.exports = function (grunt) {
   grunt.config.set('watch', {
-    styles: {
+    devStyles: {
       files: ['app/**/**/*.styl'],
       tasks: ['stylus:dev']
     },
-    html: {
+    devHtml: {
       files: ['app/**/**/*.jade'],
       tasks: ['jade', 'injector:dev']
     },
-    jsMain: {
+    devJsMain: {
       files: ['app/js/*.js','app/**/**/*.js'],
       tasks: ['browserify:devmain']
+    },
+    wordpressStyles: {
+      files: ['app/**/**/*.styl'],
+      tasks: ['stylus:wordpress']
     }
   });
 

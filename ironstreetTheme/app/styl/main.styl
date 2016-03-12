@@ -5,6 +5,9 @@ html, body
   height 100%
   width 100%
 
+a
+  text-decoration none
+
 article
   text-align center
   padding 3em 4em
@@ -45,6 +48,14 @@ h2
     border 1px solid white
     text-transform uppercase
     padding .5em 1em
+
+.redButton span
+  background $ironRed
+
+input
+  &:focus
+    outline none
+    border-color $ironRed !important
 
 [class^="icon-"]
   font-size 3em

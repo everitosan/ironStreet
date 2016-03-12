@@ -6,7 +6,7 @@
     border 1px solid white
     box-sizing border-box
     .cat
-      padding 1em 1.5em 
+      padding 1em 1.5em
       box-sizing border-box
       text-transform uppercase
       font-size .6em
@@ -26,13 +26,13 @@
       background url('../assets/other_services_cat_bg.png') no-repeat
       background-position center -17px
       min-height 20px
-      
+
 .filter
   h3, h5
     text-align left
     color $ironRed
     text-transform uppercase
-    
+
   .filters
     font-size .8em
     text-align left
@@ -53,14 +53,21 @@
     background $ironRed
   .catalog
     .item
+      cursor pointer
       padding 1em
       text-align left
       color $ironRed
       .title
         font-size .9em
         margin 1em 0
+        max-height 16px
       .figure
         border 2px solid $ironSoftLightGray
+        &:hover
+          border-color $ironRed
         img
           width 100%
+          height auto
 
+.hidden_data 
+  display none
