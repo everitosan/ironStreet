@@ -1,0 +1,25 @@
+<dom-module id="cart-location-list">
+	<template>
+		<style>
+
+
+		</style>
+
+
+    <template is="dom-repeat" items="{{locations}}">
+      <cart-location data ="{{item}}" > </cart-location>
+    </template>
+
+	</template>
+</dom-module>
+
+<script>
+	Polymer({
+		is: 'cart-location-list',
+    ready: function() {
+      //get items from localStorage
+      var storageH = new storageHelper('location');
+      this.locations = storageH.getStorageArray();
+    }
+	});
+</script>

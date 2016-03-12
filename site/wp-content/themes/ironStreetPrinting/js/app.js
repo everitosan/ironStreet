@@ -1,14 +1,15 @@
 (function($){
   $(".slider").slidesjs({
     play: {
-      active: true,
+      //active: true,
       effect: "slide",
       interval: 3000,
       auto: true,
-      swap: true,
+      //swap: true,
       pauseOnHover: false,
       restartDelay: 2500
-    },
+    }
+    ,
     pagination: {
       active: true,
       effect: "slide"

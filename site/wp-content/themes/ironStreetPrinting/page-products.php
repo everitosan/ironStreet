@@ -116,11 +116,13 @@
 
                     // hidden Data
                     echo '<div class="hidden_data">';
+                    echo '<button id="close" class="cancel"> X </button>';
+
                       echo '<div class="title">';
                         echo the_title() ;
                       echo '</div>';
                       echo '<div class="pure-g"> ';
-                        echo '<div class="pure-u-1-2">';
+                        echo '<div class=" pure-u-1 pure-u-sm-1-2">';
 
                           echo '<div class="description">';
                             echo the_field('description') ;
@@ -150,7 +152,7 @@
                             echo the_field('colors');
                           echo '</div>';
                         echo '</div>';
-                        echo '<div class="images pure-u-1-2">';
+                        echo '<div class="images  pure-u-1 pure-u-sm-1-2">';
                           echo the_field('images');
                         echo '</div>';
                       echo '</div>';

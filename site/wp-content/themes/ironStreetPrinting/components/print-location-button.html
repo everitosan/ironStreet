@@ -1,0 +1,39 @@
+<dom-module id="print-location-button">
+	<template>
+		<style>
+			
+		</style>
+
+    <div class="button redButton" on-click="selectPrintLocation" ><span>+ Add another print location</span></div>
+
+    <div class="hidden_data">
+			<button id="close" class="cancel"> X </button>
+      <p>
+        HOLA
+
+      </p>
+
+    </div>
+
+	</template>
+</dom-module>
+
+<script>
+  (function($){
+
+  	Polymer({
+  		is: 'print-location-button',
+      selectPrintLocation: function() {
+        var $html = $( this.querySelector('.hidden_data') );
+        swal({
+          title: "Print Locations",
+          text: $html.html(),
+          html: true,
+          confirmButtonColor: "#EF494B",
+          confirmButtonText: "Build a Quote"
+        });
+      }
+  	});
+
+  })(jQuery);
+</script>

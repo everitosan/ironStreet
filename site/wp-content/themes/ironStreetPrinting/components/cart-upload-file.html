@@ -1,0 +1,106 @@
+<dom-module id="cart-upload-file">
+	<template>
+		<style>
+			:host .fileInput {
+
+			}
+      :host .button input[type="file"] {
+        width: 0.1px;
+      	height: 0.1px;
+      	opacity: 0;
+      	overflow: hidden;
+      	position: absolute;
+      	z-index: -1;
+      }
+      :host .button label {
+        cursor: pointer;
+      }
+      :host .dropArea{
+        border: 2px solid #b6b9bb;
+        padding: 3em 0;
+      }
+      :host .dropArea h2 {
+        font-size: 1.4em;
+      }
+      :host .dropArea p {
+        color: #b6b9bb;
+      }
+      :host .is-dragover {
+        background: #ef494b;
+      }
+
+      :host .is-dragover h2{
+        color: white;
+      }
+
+      :host .is-dragover p{
+        color: #953637;
+      }
+
+		</style>
+
+
+    <div class="HCenter">
+      <div class="fileInput">
+        <div class="dropArea">
+          <h2> Drop your design here </h2>
+          <p>
+            PDF, PSD, AI, EPS, JPG, PNG
+         </p>
+        </div>
+        <div class="button redButton">
+
+          <span>
+            <input class="button" id="designFile" name="designFile" type="file" />
+            <label for="designFile" class$="{{disableUpload}}" >Upload from computer</label>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <input-form label="Design notes" columns="c1" ></input-form>
+
+	</template>
+</dom-module>
+
+<script>
+
+(function($) {
+
+	Polymer({
+		is: 'cart-upload-file',
+    ready: function() {
+      var droppedFiles = false;
+      $dropArea = $(this.querySelector('.dropArea'));
+      var name = '';
+
+      $dropArea.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+      })
+      .on('dragover dragenter', function() {
+        $dropArea.addClass('is-dragover');
+      })
+      .on('dragleave dragend drop', function() {
+        $dropArea.removeClass('is-dragover');
+      })
+      .on('drop', function(e) {
+        droppedFiles = e.originalEvent.dataTransfer.files;
+        var droppedFilesLenght = droppedFiles.length;
+        var fileNames = '';
+
+        $dropArea.html();
+
+        for (var i=0;i < droppedFilesLenght; i++) {
+          fileNames += '<p>'+ droppedFiles[i].name+'</p>';
+        }
+
+        $dropArea.html(fileNames);
+        this.disableUpload = "disabled";
+      });
+    }
+	});
+
+})(jQuery);
+
+</script>

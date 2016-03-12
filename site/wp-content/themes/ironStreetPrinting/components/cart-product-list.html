@@ -1,0 +1,34 @@
+<dom-module id="cart-product-list">
+	<template >
+		<style>
+			:host  {
+
+			}
+
+		</style>
+
+    <template is="dom-repeat" items="{{products}}">
+      <cart-product data ="{{item}}" > </cart-product>
+    </template>
+
+
+
+	</template>
+</dom-module>
+
+<script>
+
+(function($) {
+
+	Polymer({
+		is: 'cart-product-list',
+    ready: function() {
+      //get items from localStorage
+      var storageH = new storageHelper('cart');
+      this.products = storageH.getStorageArray();
+    }
+	});
+
+})(jQuery);
+
+</script>

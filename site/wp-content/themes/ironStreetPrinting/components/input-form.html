@@ -1,0 +1,102 @@
+<dom-module id="input-form">
+	<template>
+		<style>
+		:host .HCenter{
+			position: relative;
+		}
+		:host .input.c1 {
+			width: 100%;
+		}
+		:host .input.c2 {
+			width: 95%;
+		}
+		:host .input.right {
+			position: absolute;
+			right: 0;
+		}
+		:host input.invalid {
+			background: #F96F6A;
+			border: 2px solid #953637;
+		}
+
+		</style>
+
+
+    <div class="HCenter">
+      <div class$="input {{orientation}} {{columns}}">
+        <label>{{label}}  <span hidden$="{{hidden}}"> * </span> </label>
+        <input class$="{{valid}}" name="{{inputName}}" type="text" value={{storagedValue::input}} />
+      </div>
+    </div>
+
+	</template>
+</dom-module>
+
+<script>
+	(function($) {
+
+		Polymer({
+			is: 'input-form',
+	    properties: {
+	      required: {
+	        type: Boolean
+	      },
+	      label: {
+	        type: String
+	      },
+				storagedValue: {
+					type: String
+				},
+				orientation:{
+					type: String,
+					value: "left"
+				},
+				columns: {
+					type: String,
+					value: "c2"
+				}
+	    },
+			observers: [
+				'_inputChange(storagedValue)'
+			],
+	    ready: function() {
+				this.inputName = this.label.replace(' ','_');
+
+	      if (this.required !== undefined) {
+	        this.hidden = !this.required;
+	      } else {
+	        this.hidden = true;
+	      }
+				//load default value
+				var storageH = new storageHelper('cart-info');
+
+				this.storagedValue = storageH.findElementObjByKey(this.inputName)[this.inputName];
+
+				this._isValid();
+	    },
+			_isValid: function() {
+				if(this.storagedValue === "" && this.required) {
+					this.valid= "invalid";
+				}
+				else {
+					this.valid = "valid";
+				}
+			},
+			_inputChange: function(storagedValue) {
+				var storageH = new storageHelper('cart-info');
+				var name = this.inputName;
+
+				var obj = storageH.findElementObjByKey(name);
+
+				if($.isEmptyObject(obj)) {
+					obj[name] = storagedValue;
+					storageH.push(obj);
+				}else {
+					obj[name] = storagedValue;
+				}
+				storageH.save();
+				this._isValid();
+			}
+		});
+	})(jQuery);
+</script>

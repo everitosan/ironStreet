@@ -1,0 +1,36 @@
+<dom-module id="cart-extra">
+	<template>
+		<style>
+
+		</style>
+
+      <div on-click="toggleExtra" >
+				<span class$="{{icon}} "> </span>
+        <div class="name">{{text}}</div>
+      </div>
+
+	</template>
+</dom-module>
+
+<script>
+
+(function($) {
+
+	Polymer({
+		is: 'cart-extra',
+    properties: {
+      text: {
+        type: String
+      },
+      icon: {
+        type: String
+      }
+    },
+    toggleExtra: function() {
+      $(this).toggleClass('active');
+    }
+	});
+
+})(jQuery);
+
+</script>
