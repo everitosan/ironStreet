@@ -26,23 +26,7 @@
     <div class="pure-g">
       <div class="pure-u-1 pure-u-md-1-5"></div>
       <div class="pure-u-1 pure-u-md-3-5">
-        <div class="pure-g conCat">
-          <div class="pure-u-1-3 cat active">t-shirts</div>
-          <div class="pure-u-1-3 cat center">sweatshirts</div>
-          <div class="pure-u-1-3 cat">extras </div>
-        </div>
-        <div class="pure-g conCatImg">
-          <div class="pure-u-1-3 active"></div>
-          <div class="pure-u-1-3"></div>
-          <div class="pure-u-1-3"></div>
-        </div>
-        <div class="pure-g">
-          <div class="pure-u-1 pure-u-1-5"></div>
-          <div class="pure-u-1 pure-u-3-5">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
-          </div>
-          <div class="pure-u-1 pure-u-1-5"></div>
-        </div>
+        <product-type-selector> </product-type-selector>
       </div>
       <div class="pure-u-1 pure-u-md-1-5"></div>
     </div>
@@ -107,8 +91,15 @@
             	echo '<div class="pure-g" id="product_list">';
             	while ( $the_query->have_posts() ) {
             		$the_query->the_post();
-                echo '<div class="pure-u-1 pure-u-md-1-3">';
-                  echo '<div class="item">';
+                echo '<div class="pure-u-1 pure-u-md-1-3 itemContainer" data-filter="';
+                echo " ".the_field('type');
+                echo " ".the_field('category');
+                echo " ".the_field('brand');
+                echo " ".the_field('style');
+                echo " ".the_field('material');
+                echo " ".the_field('price');
+                echo '">';
+                  echo '<div class="item" >';
                     echo '<div class="title">'.  get_the_title() .'</div>';
                     echo '<div class="figure">';
                        the_post_thumbnail();

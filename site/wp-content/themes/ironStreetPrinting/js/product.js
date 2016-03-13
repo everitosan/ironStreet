@@ -12,10 +12,6 @@
     }
 
 
-
-
-
-
   function changeColor() {
     $(this).parent().find('.color').removeClass('active');
     $(this).addClass('active');
@@ -26,8 +22,8 @@
     var $html = $('.hidden_data');
     var len  = $html.length;
 
-    for(var i = 0 ; i < len; i++) {
 
+    for(var i = 0 ; i < len; i++) {
       var $colors = $($html[i]).find('.colors');
       var listColors = $colors.html().split(',');
       var domColors = '';
@@ -43,6 +39,11 @@
       });
       $colors.html(domColors);
     };
+
+  }
+
+  function getColorObject() {
+    var colorsArray = $('#acf-colors').find('input[type="checkbox"]');
 
   }
 
