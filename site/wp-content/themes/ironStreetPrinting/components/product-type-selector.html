@@ -103,7 +103,6 @@
 			}
 
       $('.itemContainer').each((index, item)=> {
-				//console.log(myFilter.getFilterText());
         if( item.getAttribute('data-filter').indexOf(myFilter.getFilterVal('Selector')) !== -1) {
           $(item).addClass('filtered');
         }
