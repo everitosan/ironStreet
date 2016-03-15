@@ -144,7 +144,12 @@
                           echo '</div>';
                         echo '</div>';
                         echo '<div class="images  pure-u-1 pure-u-sm-1-2">';
-                          echo the_field('images');
+                          echo '<div class="mainImage" >';
+                            the_post_thumbnail();
+                          echo '</div>';
+                          echo '<div class="listImages">';
+                            echo the_field('images');
+                          echo '</div>';
                         echo '</div>';
                       echo '</div>';
                     echo '</div>';

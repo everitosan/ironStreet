@@ -6,11 +6,16 @@
 
       //listener for color change in alert
       $(document).on('click', '.showSweetAlert .color', changeColor );
+      $(document).on('click', '.showSweetAlert .images .listImages img', changeImage );
 
       //Set divs with colors
       setColorDivs();
     }
 
+
+  function changeImage() {
+    $(this).parent().parent().parent().find('.mainImage img').attr('src', this.src);
+  }
 
   function changeColor() {
     $(this).parent().find('.color').removeClass('active');
