@@ -50,20 +50,21 @@
         display: block;
       }
 
+
 		</style>
 
 
     <div class="pure-g conCat">
-      <div class="pure-u-1-3 cat active" on-click="typeFilter">
-        <div class="label">t-shirts</div>
+      <div class="pure-u-1-3 cat active">
+        <div class="label" on-click="typeFilter">t-shirts</div>
         <div class="conCatImg"></div>
       </div>
-      <div class="pure-u-1-3 cat center" on-click="typeFilter">
-        <div class="label">sweatshirts</div>
+      <div class="pure-u-1-3 cat center">
+        <div class="label" on-click="typeFilter">sweatshirts</div>
         <div class="conCatImg"></div>
         </div>
-      <div class="pure-u-1-3 cat" on-click="typeFilter">
-        <div class="label">extras</div>
+      <div class="pure-u-1-3 cat">
+        <div class="label" on-click="typeFilter">extras</div>
         <div class="conCatImg"></div>
       </div>
     </div>
@@ -86,17 +87,32 @@
 
 	Polymer({
 		is: 'product-type-selector',
-    typeFilter: function (event) {
-      $('.cat').removeClass('active');
-      $(event.path[1]).addClass('active');
+		ready: function() {
+			setTimeout(this.typeFilter.bind(this,'t-shirts'), 500);
 
-      $('.itemContainer').hide();
-      var type = event.path[0].innerHTML;
+		},
+    typeFilter: function (param) {
+			var myFilter = new filterHelper();
+
+			if(typeof(param) === "string") {
+				myFilter.updateFilter('Selector', param);
+			} else {
+				$('.cat').removeClass('active');
+				$(param.path[1]).addClass('active');
+				myFilter.updateFilter('Selector', param.path[0].innerHTML);
+			}
+
       $('.itemContainer').each((index, item)=> {
-        if( item.getAttribute('data-filter').indexOf(event.path[0].innerHTML) !== -1) {
-          $(item).show();
+				//console.log(myFilter.getFilterText());
+        if( item.getAttribute('data-filter').indexOf(myFilter.getFilterVal('Selector')) !== -1) {
+          $(item).addClass('filtered');
         }
-      } );
+				else {
+					$(item).removeClass('filtered');
+				}
+      });
+
+			myFilter.filter(myFilter.getFilterText());
 
     }
 	});

@@ -1,0 +1,58 @@
+<dom-module id="filter-item">
+	<template>
+		<style>
+
+		</style>
+
+    <div on-click="toogleState" >
+      <div class="label"> {{text}} </div>
+      <div class$="radioButton {{className}}"></div>
+    </div>
+
+
+	</template>
+</dom-module>
+
+<script>
+
+(function($) {
+
+	Polymer({
+		is: 'filter-item',
+    properties: {
+      text: {
+        type: String
+      },
+			active: {
+				type: Boolean,
+				value: false
+			},
+			className: {
+				type: String,
+				value: ""
+			},
+			category: { // saves the category that belong to the fiter item
+				type: String
+			}
+    },
+		ready: function() {
+			if(this.active) {
+				this.className = "active";
+			}
+		},
+    toogleState: function() {
+      var _self = this;
+      $(this).parent().find('.radioButton').removeClass('active');
+      $(this).find('.radioButton').toggleClass('active');
+			
+			var my_filter = new filterHelper();
+			my_filter.updateFilter(this.category, this.text);
+			my_filter.filter(my_filter.getFilterText());
+
+
+    }
+	});
+
+})(jQuery);
+
+</script>

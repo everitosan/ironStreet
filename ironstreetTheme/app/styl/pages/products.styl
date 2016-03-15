@@ -39,11 +39,18 @@
         max-height 16px
       .figure
         border 2px solid $ironSoftLightGray
+        height 0
+        padding-bottom 110%
         &:hover
           border-color $ironRed
         img
           width 100%
           height auto
+  .itemContainer
+    display none
+    &.filtered
+      display block
+
 
 .hidden_data
   display none

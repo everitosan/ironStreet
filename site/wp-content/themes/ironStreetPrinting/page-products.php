@@ -35,7 +35,7 @@
     <div class="pure-g">
       <div class="pure-u-1 pure-u-md-1-5"></div>
       <div class="pure-u-1 pure-u-md-3-5">
-        <h3>Filter//</h3>
+        <h3>Filter //</h3>
 
         <div class="pure-g filters">
           <div class="pure-u-1-3 pure-u-sm-1-5" id="category_filter_list">
@@ -92,12 +92,12 @@
             	while ( $the_query->have_posts() ) {
             		$the_query->the_post();
                 echo '<div class="pure-u-1 pure-u-md-1-3 itemContainer" data-filter="';
-                echo " ".the_field('type');
                 echo " ".the_field('category');
                 echo " ".the_field('brand');
                 echo " ".the_field('style');
                 echo " ".the_field('material');
                 echo " ".the_field('price');
+                echo " ".the_field('type');
                 echo '">';
                   echo '<div class="item" >';
                     echo '<div class="title">'.  get_the_title() .'</div>';

@@ -15,17 +15,29 @@
     appendFilterData($('#material_filter_list'), materials);
 
     $('.filters_data').remove();
+    setTimeout(initialFiltered, 500);
+  }
+
+  function initialFiltered() {
+    var myFilter = new filterHelper();
+    myFilter.filter(myFilter.getFilterText());
   }
 
   function appendFilterData($listContainer, dataArray ) {
+    var myFilter = new filterHelper();
+
     var len = dataArray.length;
     var textList = '';
 
     for (var i = 0 ; i < len; i++) {
-      textList+= '<div>';
-      textList+= "<div class='label'>" + dataArray[i].label + "</div>";
-      textList+= "<div class='radioButton'></div>";
-      textList += '</div>';
+      var active = "";
+      if (i === 0) {
+        active = "active";
+        var index = $listContainer.text().replace(/(\r\n|\n|\r|\s)/gm,"");
+        myFilter.updateFilter(index, dataArray[i].label);
+      }
+
+      textList+= '<filter-item category="'+index+'" '+active+' text="'+dataArray[i].label+'"></filter-item>';
     }
 
     $listContainer.append(textList);
