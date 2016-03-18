@@ -4,7 +4,7 @@
       margin-bottom: 3em
     .historyText
       color $ironSoftLightGray2
-  
+
   .ourHistory
     padding 1em 0
     .timeLine
@@ -33,33 +33,35 @@
         display flex
         flex-direction column
         justify-content center
-        img
+        div
           margin 0 auto
+          background url('../assets/nextArrow.png')
           height 61px
           width 21px
       .prev
-        img
+        div
           transform rotateZ(180deg)
-  
+
   .address
     h2
-      color $ironRed 
-  .map
+      color $ironRed
+  .gMap
     padding 0
+    height 500px
     padding-bottom 3em
-    .mainMap
-      width 100% 
-    .pure-g
-      margin-top 3em
+  .map
+    img
+      position relative
+      bottom 1em
     address
       color $ironRed
       display inline-block
       text-align left
-      vertical-align super
+      vertical-align top
     p
       color $ironRed
       text-align left
-      
+
   .form
     background url('../assets/emailUs_bg.jpg') no-repeat
     background-size cover
@@ -75,12 +77,36 @@
       box-sizing border-box
       border 3px solid white
       background transparent
-      margin .4em 0 
+      margin .4em 0
       padding .5em 1em
       width 100%
     textarea
       resize none
-      
+    input::-webkit-input-placeholder
+      color white !important
+    input:-moz-placeholder
+      color white !important
+    input::-moz-placeholder
+      color white !important
+    input:-ms-input-placeholder
+      color white !important
+    textarea::-webkit-input-placeholder
+      color white !important
+    textarea:-moz-placeholder
+      color white !important
+    textarea::-moz-placeholder
+      color white !important
+    textarea:-ms-input-placeholder
+      color white !important
+@media screen and (max-width: 768px)
+  #aboutus
+    .map
+      img
+        display block
+        margin 0 auto
+      address
+        margin 1em 0
+        text-align center
 @media screen and (max-width: 568px)
   #aboutus
     .form

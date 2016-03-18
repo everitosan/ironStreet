@@ -10,8 +10,12 @@
 <header class="fullHeight">
   <div class="header1 vCenter">
     <h1>Something About Us</h1>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.</p><span class="buildAQuote_button">
-Build A Quote</span>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.</p>
+    <span class="buildAQuote_button">
+      <a href="build-a-quote">
+        Build A Quote
+      </a>
+    </span>
     <div class="down_button">
       <figure><img src="<?= get_bloginfo('template_url') ?>/assets/down1.png" /></figure>
     </div>
@@ -19,7 +23,19 @@ Build A Quote</span>
 </header>
 <section>
   <article class="social-media vCenter">
-    <div class="iconContainer"><img src="<?= get_bloginfo('template_url') ?>/assets/icons/ironStreet_logo.png" class="logo"><img src="<?= get_bloginfo('template_url') ?>/assets/separator.png" class="separator"><span class="icon-facebook"></span><span class="icon-instagram"></span><span class="icon-twitter"></span></div>
+    <div class="iconContainer">
+      <img src="<?= get_bloginfo('template_url') ?>/assets/icons/ironStreet_logo.png" class="logo">
+      <img src="<?= get_bloginfo('template_url') ?>/assets/separator.png" class="separator">
+      <a href="https://www.facebook.com/IronStreetPrinting/?fref=ts" target="_blank">
+        <span class="icon-facebook"></span>
+      </a>
+      <a href="https://www.instagram.com/ironstreetprinting/" target="_blank">
+        <span class="icon-instagram"></span>
+      </a>
+      <a href="https://twitter.com/ironystreet"  target="_blank">
+        <span class="icon-twitter"></span>
+      </a>
+    </div>
   </article>
   <article class="our-mission">
     <h2>Our Mission</h2>
@@ -58,25 +74,29 @@ Build A Quote</span>
     </div>
   </article>
   <article class="testimonial vCenter">
-    <div class="item">
-      <div class="pure-g">
-        <div class="pure-u-1 pure-u-md-1-5"></div>
-        <div class="pure-u-1 pure-u-md-3-5">
-          <div class="pure-g">
-            <div class="pure-u-1 pure-u-md-4-5">
-              <div class="quotation">“</div>
-              <div class="text">We have found that SenText Solutions has been an easy way for us to reach and broaden our core customer base. It is simple to send business update, specials and promotions.</div>
-            </div>
-            <div class="pure-u-1 pure-u-md-1-5">
-              <div class="logo">
-                <figure><img src="<?= get_bloginfo('template_url') ?>/assets/koa_logo.png"><a href="http://www.konaworld.com">Konaworld.com</a></figure>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="pure-u-1 pure-u-md-1-5"></div>
-      </div>
-    </div>
+    <testimonial-slider class="testimonial_slider">
+    <?php
+      $args = array(
+        'post_type' => 'testimonial'
+      );
+      $the_query = new WP_Query($args);
+      if( $the_query-> have_posts()) {
+        while ($the_query-> have_posts()) {
+          $the_query->the_post();
+          echo "<testimonial-slider-item text=' ";
+          echo the_field('testimonial');
+          echo "' url = '";
+          echo the_field('url') . "' >";
+            the_post_thumbnail();
+          echo "</testimonial-slider-item>";
+        }
+      }
+     ?>
+
+   </testimonial-slider>
+
+
+
   </article>
   <article class="services">
     <h2>Our Services</h2>
@@ -90,22 +110,22 @@ Build A Quote</span>
         <div class="pure-u-1 pure-u-md-1-4 item"><span class="icon-ink"></span>
           <div class="outboxButton"><span>screen Print</span></div>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.</p>
-          <p>LEARN MORE</p>
+          <p class="link">LEARN MORE</p>
         </div>
         <div class="pure-u-1 pure-u-md-1-4 item"><span class="icon-pencil"></span>
-          <div class="outboxButton"><span>screen Print</span></div>
+          <div class="outboxButton"><span>Graphic Design</span></div>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.</p>
-          <p>LEARN MORE</p>
+          <p class="link">LEARN MORE</p>
         </div>
         <div class="pure-u-1 pure-u-md-1-4 item"><span class="icon-circle"></span>
-          <div class="outboxButton"><span>screen Print</span></div>
+          <div class="outboxButton"><span>Plotted vinil</span></div>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.</p>
-          <p>LEARN MORE</p>
+          <p class="link">LEARN MORE</p>
         </div>
         <div class="pure-u-1 pure-u-md-1-4 item"><span class="icon-box"></span>
-          <div class="outboxButton"><span>screen Print</span></div>
+          <div class="outboxButton"><span>shipping</span></div>
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 1500s.</p>
-          <p>LEARN MORE</p>
+          <p class="link">LEARN MORE</p>
         </div>
       </div>
     </div>
@@ -129,7 +149,11 @@ Build A Quote</span>
           </div>
           <div class="pure-u-1 pure-u-md-1-3"></div>
         </div>
-        <div class="button"><span>start here to build a quote</span></div>
+        <div class="button">
+          <a href="build-a-quote">
+            <span>start here to build a quote</span>
+          </a>
+        </div>
       </div>
       <div class="slide">
         <h2>EASIER THAN YOU THINK</h2>
@@ -140,8 +164,25 @@ Build A Quote</span>
           </div>
           <div class="pure-u-1 pure-u-md-1-3"></div>
         </div>
-        <div class="button"><span>start here to build a quote</span></div>
+        <div class="button">
+          <a href="build-a-quote">
+            <span>start here to build a quote</span>
+          </a>
+        </div>
       </div>
+
+      <a class="slidesjs-previous slidesjs-navigation" href="#" title="Previous">
+        <div class="arrowContainer">
+          <img src="<?= get_bloginfo('template_url') ?>/assets/arrow.png">
+        </div>
+      </a>
+
+      <a class="slidesjs-next slidesjs-navigation" href="#" title="Previous">
+        <div class="arrowContainer">
+          <img src="<?= get_bloginfo('template_url') ?>/assets/arrow.png">
+        </div>
+      </a>
+
     </div>
     <div class="pure-g">
       <div class="pure-u-1 pure-u-md-1-5"></div>
@@ -165,20 +206,17 @@ Build A Quote</span>
             <div class="pure-u-1 pure-u-md-1-2">
               <input type="text" placeholder="EMAIL:">
             </div>
-          </div>
-          <div class="pure-g">
             <div class="pure-u-1 pure-u-md-1-2">
               <input type="text" placeholder="NAME:">
             </div>
             <div class="pure-u-1 pure-u-md-1-2">
               <input type="text" placeholder="PHONE:">
             </div>
-          </div>
-          <div class="pure-g">
             <div class="pure-u-1">
               <textarea rows="5" placeholder="MESSAGE: "></textarea>
             </div>
           </div>
+          
         </form>
       </div>
       <div class="pure-u-1 pure-u-sm-1-5"></div>

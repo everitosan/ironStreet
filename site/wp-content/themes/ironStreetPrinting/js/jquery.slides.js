@@ -173,7 +173,7 @@
           paginationItem = $("<li>", {
             "class": "slidesjs-pagination-item"
           }).appendTo(pagination);
-          paginationLink = $("<a>", {
+          paginationLink = $("<div>", {
             href: "#",
             "data-slidesjs-item": i,
             html: i + 1
@@ -200,7 +200,7 @@
       this.data = $.data(this);
       current = number > -1 ? number : this.data.current;
       $(".active", $element).removeClass("active");
-      return $(".slidesjs-pagination li:eq(" + current + ") a", $element).addClass("active");
+      return $(".slidesjs-pagination li:eq(" + current + ") div", $element).addClass("active");
     };
     Plugin.prototype.update = function() {
       var $element, height, width;
@@ -215,6 +215,11 @@
       height = (this.options.height / this.options.width) * width;
       this.options.width = width;
       this.options.height = height;
+
+      $(this.element).find('.slidesjs-navigation').css({
+        height: height
+      });
+
       return $(".slidesjs-control, .slidesjs-container", $element).css({
         width: width,
         height: height

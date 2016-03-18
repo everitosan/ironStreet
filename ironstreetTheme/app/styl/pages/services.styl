@@ -64,8 +64,11 @@
     .des
       font-size .7em
     .characteristics
+      display inline-block
       color $ironRed
       text-align left
+      [class^="icon-"], [class*=" icon-"]
+        font-size 1.2em
 
 .the_details
   h2
@@ -76,9 +79,27 @@
 .glow_in_the_dark
   color white
   padding 0
-  .slider
+  .slider-services
     background url('../assets/slide_services_bg.png') no-repeat
     background-size cover
+    position relative
+    .slidesjs-navigation
+      position absolute
+      display table
+      top 0
+      z-index 100
+    & .arrowContainer
+      display table-cell
+      vertical-align middle
+      padding 0 35px
+      &:hover
+        background rgba(255,255,255,.1)
+    .slidesjs-previous
+      left 0
+    .slidesjs-next
+      right 0
+      img
+        transform rotateY(180deg)
     .goTo
       background rgba(255,255,255,.2)
     .info
@@ -95,30 +116,5 @@
   background url('../assets/other_services_bg.jpg') no-repeat
   background-size cover
   color white
-  p.first
-    margin 3em 0
-  .conCat
-    border 1px solid white
-    box-sizing border-box
-    .cat
-      padding 1em 1.5em
-      box-sizing border-box
-      text-transform uppercase
-      font-size .6em
-      cursor pointer
-    .active
-      background-color white
-      color $ironRed
-    .center
-      box-sizing border-box
-      border-left 1px solid white
-      border-right 1px solid white
-  .conCatImg
-    div
-      padding 1em
-      box-sizing border-box
-    .active
-      background url('../assets/other_services_cat_bg.png') no-repeat
-      background-position center -17px
   .outboxButton
     margin-top 5em

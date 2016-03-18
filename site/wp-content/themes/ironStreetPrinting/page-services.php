@@ -116,8 +116,11 @@
           <p class="des">Millions use Any.do to realize their true potential. Any.do helps you achieve anything by syncing your personal tasks, work projects, and shared lists so you have.</p>
           <div class="characteristics">
             <div class="characteristic">
-              <span-icon> </span-icon><span class="text">Durability</span></div>
-            <div class="characteristic">Low Cost</div>
+              <span class="icon-calendar"> </span><span class="text">Durability</span>
+            </div>
+            <div class="characteristic">
+              <span class="icon-pig"> </span><span class="text">Low Cost</span>
+            </div>
           </div>
         </div>
       </div>
@@ -125,12 +128,31 @@
         <div class="item"><img src="<?= get_bloginfo('template_url') ?>/assets/plastisol_B2.png">
           <div class="name">water based</div>
           <p class="des">Millions use Any.do to realize their true potential. Any.do helps you achieve anything by syncing your personal tasks, work projects, and shared lists so you have.</p>
+          <div class="characteristics">
+            <div class="characteristic">
+              <span class="icon-calendar"> </span><span class="text">Durability</span>
+            </div>
+            <div class="characteristic">
+              <span class="icon-hand"> </span><span class="text">Soft texture</span>
+            </div>
+            <div class="characteristic">
+              <span class="icon-sheets"> </span><span class="text">Echo friendly</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="pure-u pure-u-md-1-5">
         <div class="item"><img src="<?= get_bloginfo('template_url') ?>/assets/plastisol_B2.png">
           <div class="name">discharge</div>
           <p class="des">Millions use Any.do to realize their true potential. Any.do helps you achieve anything by syncing your personal tasks, work projects, and shared lists so you have.</p>
+          <div class="characteristics">
+            <div class="characteristic">
+              <span class="icon-calendar"> </span><span class="text">Durability</span>
+            </div>
+            <div class="characteristic">
+              <span class="icon-hand"> </span><span class="text">Soft texture</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="pure-u pure-u-md-1-5"></div>
@@ -152,7 +174,8 @@
     </div>
   </article>
   <article class="glow_in_the_dark">
-    <div class="slider">
+    <div class="slider-services">
+
       <div class="pure-g">
         <div class="pure-u-1-4 goTo"></div>
         <div class="pure-u-1-4"></div>
@@ -164,6 +187,31 @@
         </div>
         <div class="pure-u-1-4 goTo"></div>
       </div>
+
+      <div class="pure-g">
+        <div class="pure-u-1-4 goTo"></div>
+        <div class="pure-u-1-4"></div>
+        <div class="pure-u-1-4 info">
+          <h3>GLOW IN THE DARK</h3>
+          <p>Millions use Any.do to realize their true potential. Any.do helps you achieve anything by syncing your personal tasks, work projects, and shared lists so you have.</p>
+          <p>Work projects, and shared lists so you have. Millions use Any.do to realize their true potential. Any.do helps you achieve anything by syncing your.</p>
+          <div class="outboxButton"><span>gallery</span></div>
+        </div>
+        <div class="pure-u-1-4 goTo"></div>
+      </div>
+
+
+      <a class="slidesjs-previous slidesjs-navigation" href="#" title="Previous">
+        <div class="arrowContainer">
+          <img src="<?= get_bloginfo('template_url') ?>/assets/arrow.png">
+        </div>
+      </a>
+
+      <a class="slidesjs-next slidesjs-navigation" href="#" title="Previous">
+        <div class="arrowContainer">
+          <img src="<?= get_bloginfo('template_url') ?>/assets/arrow.png">
+        </div>
+      </a>
     </div>
   </article>
   <article class="glow_in_the_dark_text">
@@ -181,21 +229,8 @@
       <div class="pure-u-1 pure-u-md-1-5"></div>
       <div class="pure-u-1 pure-u-md-3-5">
         <p class="first">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
-        <div class="pure-g conCat">
-          <div class="pure-u-1-3 cat active">Graphic Design</div>
-          <div class="pure-u-1-3 cat center">Plotted vinyl</div>
-          <div class="pure-u-1-3 cat">shipping services</div>
-        </div>
-        <div class="pure-g conCatImg">
-          <div class="pure-u-1-3 active"><span class="icon-pencil"></span></div>
-          <div class="pure-u-1-3"></div>
-          <div class="pure-u-1-3"></div>
-        </div>
-        <div class="left">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
-            book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-          <div class="outboxButton"><span>gallery</span></div>
-        </div>
+        <services-selector>
+        </services-selector>
       </div>
       <div class="pure-u-1 pure-u-md-1-5"></div>
     </div>

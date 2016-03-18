@@ -20,6 +20,7 @@
 
     </div>
     <div class="pure-u-1 pure-u-md-18-24">
+      <img class="menu_mobile" src="<?= get_bloginfo('template_url') ?>/assets/menu_mobile.png" alt="" />
       <?php wp_nav_menu($args)?>
     </div>
     <div class="pure-u-1 pure-u-md-3-24">

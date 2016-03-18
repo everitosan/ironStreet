@@ -34,30 +34,12 @@
     </div>
   </article>
   <article class="ourHistory">
-    <div class="timeLine"><img src="<?= get_bloginfo('template_url') ?>/assets/timeLinePhoto.jpg"><img src="<?= get_bloginfo('template_url') ?>/assets/timeLinePhoto.jpg"><img src="<?= get_bloginfo('template_url') ?>/assets/timeLinePhoto.jpg"><img src="<?= get_bloginfo('template_url') ?>/assets/timeLinePhoto.jpg"></div>
-    <div class="timeLineFooter">
-      <div class="spaceBar">
-        <div class="bar"></div>
-        <div class="years">
-          <div class="pure-g">
-            <div class="pure-u-1-6 active">2010</div>
-            <div class="pure-u-1-6 active">2011</div>
-            <div class="pure-u-1-6">2012</div>
-            <div class="pure-u-1-6">2013</div>
-            <div class="pure-u-1-6">2014</div>
-            <div class="pure-u-1-6">2015</div>
-          </div>
-        </div>
-      </div>
-      <div class="pure-g">
-        <div class="pure-u-1-5 prev"><img src="<?= get_bloginfo('template_url') ?>/assets/nextArrow.png"></div>
-        <div class="pure-u-3-5">
-          <h2>our history</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry Ipsum is simply dummy text of the printing and typesetting industry. </p>
-        </div>
-        <div class="pure-u-1-5 next"><img src="<?= get_bloginfo('template_url') ?>/assets/nextArrow.png"></div>
-      </div>
-    </div>
+    <our-history-slider>
+      <img src="<?= get_bloginfo('template_url') ?>/assets/timeLinePhoto.jpg">
+      <img src="<?= get_bloginfo('template_url') ?>/assets/timeLinePhoto.jpg">
+      <img src="<?= get_bloginfo('template_url') ?>/assets/timeLinePhoto.jpg">
+      <img src="<?= get_bloginfo('template_url') ?>/assets/timeLinePhoto.jpg">
+    </our-history-slider>
   </article>
   <article class="address">
     <h2>address</h2>
@@ -69,18 +51,31 @@
       <div class="pure-u-1 pure-u-md-1-3"></div>
     </div>
   </article>
-  <article class="map"><img src="<?= get_bloginfo('template_url') ?>/assets/map.jpg" class="mainMap">
+  <article class="gMap">
+
+    <google-map latitude="48.749618" longitude="-122.473858" fit-to-markers zoom="15" maxZoom="16" minZoom="14">
+      <google-map-marker latitude="48.749618" longitude="-122.473858"
+      title="Ironstreet printing"></google-map-marker>
+    </google-map>
+
+  </article>
+  <article class="map">
     <div class="pure-g">
       <div class="pure-u-1 pure-u-md-2-24"></div>
-      <div class="pure-u-1 pure-u-md-10-24"><img src="<?= get_bloginfo('template_url') ?>/assets/mapPointer.png" class="mapPointer"><address>
-1242 N Forest St, Basement Alley access<br>Bellingham, WA 98227</address></div>
       <div class="pure-u-1 pure-u-md-10-24">
-        <p>
-          Phone: (366) 387 3847
-          <br>Email: info@ironstreetprinting.com</p>
+        <img src="<?= get_bloginfo('template_url') ?>/assets/mapPointer.png" class="mapPointer">
+        <address>
+          1242 N Forest St, Basement Alley access<br>Bellingham, WA 98227
+        </address>
       </div>
-      <div class="pure-u-1 pure-u-md-2-24"></div>
-    </div>
+        <div class="pure-u-1 pure-u-md-10-24">
+          <address>
+            Phone: (366) 387 3847
+            <br>Email: info@ironstreetprinting.com
+          </address>
+          </div>
+          <div class="pure-u-1 pure-u-md-2-24"></div>
+        </div>
   </article>
   <article class="form">
     <h2>Heeeey you!</h2>
