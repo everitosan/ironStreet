@@ -56,18 +56,8 @@
           </div>
           <div class="pure-u-1-3 pure-u-sm-1-5" id="price_filter_list">
             <h5>Price</h5>
-            <div>
-              <div class="label">Example</div>
-              <div class="radioButton"></div>
-            </div>
-            <div>
-              <div class="label">Example</div>
-              <div class="radioButton"></div>
-            </div>
-            <div>
-              <div class="label">Example</div>
-              <div class="radioButton active"></div>
-            </div>
+
+
           </div>
         </div>
       </div>

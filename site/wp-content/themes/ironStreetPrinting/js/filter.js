@@ -7,12 +7,14 @@
     var brands = $filters.find('#acf-field-brand')[0];
     var styles = $filters.find('#acf-field-style')[0];
     var materials = $filters.find('#acf-field-material')[0];
+    var prices = $filters.find('#acf-field-price')[0];
 
 
     appendFilterData($('#category_filter_list'), categories);
     appendFilterData($('#brand_filter_list'), brands);
     appendFilterData($('#style_filter_list'), styles);
     appendFilterData($('#material_filter_list'), materials);
+    appendFilterData($('#price_filter_list'), prices);
 
     $('.filters_data').remove();
     setTimeout(initialFiltered, 500);
