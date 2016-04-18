@@ -50,6 +50,12 @@
         display: block;
       }
 
+			:host .product-description p{
+				display: none;
+			}
+			:host .product-description p.active{
+				display: block;
+			}
 
 		</style>
 
@@ -70,10 +76,12 @@
     </div>
 
 
-    <div class="pure-g">
+    <div class="pure-g product-description">
       <div class="pure-u-1 pure-u-1-5"></div>
       <div class="pure-u-1 pure-u-3-5">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+        <p class="t-shirts active" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+        <p class="sweatshirts" >Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <p class="extras" >Lorem Ipsum is simply dummy text of the.</p>
       </div>
       <div class="pure-u-1 pure-u-1-5"></div>
     </div>
@@ -94,14 +102,19 @@
     typeFilter: function (param) {
 			var myFilter = new filterHelper();
 
+			//Add to filter regexp
 			if(typeof(param) === "string") {
 				myFilter.updateFilter('Selector', param);
 			} else {
 				$('.cat').removeClass('active');
 				$(param.path[1]).addClass('active');
 				myFilter.updateFilter('Selector', param.path[0].innerHTML);
-			}
 
+				//Toggles description text
+				$('.product-description p').removeClass('active');
+				$('.'+param.path[0].innerHTML).addClass('active');
+			}
+			//Filter items
       $('.itemContainer').each((index, item)=> {
         if( item.getAttribute('data-filter').indexOf(myFilter.getFilterVal('Selector')) !== -1) {
           $(item).addClass('filtered');
